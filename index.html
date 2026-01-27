@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?" />
-    <link rel="stylesheet" href="styles.min.css" />
+    <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -111,7 +111,6 @@
 
 <section class="why">
     <img src="static/tools.jpg">
-    <!-- <div class="floating-image-container"><img src="static/tools.jpg"></div> -->
     <div class="container">
         <h2 class="newsreader-500">Why Choose Allen &amp; Co Electrical</h2>
         <ul class="why-list">
@@ -133,7 +132,11 @@
         </a>
     </div>
 </section>
-
+<div id="fullscreen-spinner" class="fixed loading-spinner-container spinner show">
+    <div class="spinner-border show-spinner" role="status">
+        <span hidden>Loading...</span>
+    </div>
+</div>
 <footer class="footer">
     <div class="container footer-inner">
         <span>Serving Dublin &amp; Surrounding Areas</span>
@@ -141,5 +144,7 @@
     </div>
     <p class="copyright">© 2026 Allen &amp; Co Electrical</p>
 </footer>
+<script src="scripts.js"></script>
+
 </body>
 </html>

@@ -5,9 +5,12 @@
     <title>Services | Allen & Co Electrical</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
-    <link rel="stylesheet" href="styles.min.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?" />
+    <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -20,7 +23,6 @@
         <nav class="nav">
             <a href="index.html">Home</a>
             <a href="services.html">Services</a>
-            
         </nav>
         <div class="nav-buttons">
             <a href="tel:+353874407800" class="btn btn-call"><i class="fa-solid fa-phone"></i> Call Now</a>
@@ -28,23 +30,38 @@
         </div>
     </div>
 </header>
-
-<section class="page-hero">
-    <div class="container">
-        <h1>Electrical Services</h1>
-        <p>
-            Domestic and commercial electrical services delivered safely,
-            professionally, and in line with Irish electrical standards.
-        </p>
+<section class="hero hero-page">
+    <div class="hero-overlay"></div>
+    <div class="container hero-inner">
+        <div class="hero-text">
+            <h1 class="newsreader-400 serif">Electrical Services</h1>
+            <p class="hero-sub">
+                Domestic and commercial electrical services delivered safely,
+                professionally, and in line with Irish electrical standards.
+            </p>
+            <div class="hero-actions">
+                <a href="tel:+353874407800" class="btn btn-call large"><i class="fa-solid fa-phone"></i> Call Now</a>
+                <a href="https://wa.me/353874407800" class="btn btn-whatsapp large"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+            </div>
+        </div>
     </div>
 </section>
 
 <section class="services-page">
+    <svg class="hidden">
+        <filter id='roughpaper' >
+            <feTurbulence type="fractalNoise" baseFrequency='0.8' result='noise' numOctaves="3" />
+            <feDiffuseLighting in='noise' lighting-color='#f0f0f0' surfaceScale='0.5'>
+                <feDistantLight azimuth='45' elevation='50' />
+            </feDiffuseLighting>
+        </filter>
+            
+    </svg>
     <div class="container services-stack">
 
         <div class="service-block">
-            <h2><i class="fa-solid fa-house"></i> Domestic Electrical</h2>
-            <ul>
+            <h2 class="newsreader-500"><i class="fa-solid fa-house"></i> Domestic Electrical</h2>
+            <ul class="service-list">
                 <li>Electrical fault-finding and repairs</li>
                 <li>Tripping circuits, RCD/RCBO issues and nuisance trips</li>
                 <li>Sockets, switches, USB sockets and power upgrades</li>
@@ -62,8 +79,8 @@
         </div>
 
         <div class="service-block">
-            <h2><i class="fa-solid fa-plug"></i> Rewires and Upgrades</h2>
-            <ul>
+            <h2 class="newsreader-500"><i class="fa-solid fa-plug"></i> Rewires and Upgrades</h2>
+            <ul class="service-list">
                 <li>Full house rewires</li>
                 <li>Partial rewires (extensions, kitchens, renovations, individual circuits)</li>
                 <li>Lighting reconfiguration and circuit improvements</li>
@@ -72,8 +89,8 @@
         </div>
 
         <div class="service-block">
-            <h2><i class="fa-solid fa-building"></i> Commercial Electrical</h2>
-            <ul>
+            <h2 class="newsreader-500"><i class="fa-solid fa-building"></i> Commercial Electrical</h2>
+            <ul class="service-list">
                 <li>Commercial fault-finding and repairs</li>
                 <li>Office, retail and light industrial electrical works</li>
                 <li>Commercial fit-outs and upgrades</li>
@@ -86,8 +103,8 @@
         </div>
 
         <div class="service-block">
-            <h2><i class="fa-solid fa-clipboard-list"></i> Testing, Compliance and Certification</h2>
-            <ul>
+            <h2 class="newsreader-500"><i class="fa-solid fa-clipboard-list"></i> Testing, Compliance and Certification</h2>
+            <ul class="service-list">
                 <li>Electrical inspection and testing</li>
                 <li>Certification provided for qualifying works (where required)</li>
                 <li>Safety checks for landlords and rented properties</li>
@@ -96,8 +113,8 @@
         </div>
 
         <div class="service-block highlight">
-            <h2><i class="fa-solid fa-triangle-exclamation"></i> Emergency Call-Outs</h2>
-            <ul>
+            <h2 class="newsreader-500"><i class="fa-solid fa-triangle-exclamation"></i> Emergency Call-Outs</h2>
+            <ul class="service-list">
                 <li>Urgent electrical repairs and make-safe works</li>
                 <li>Loss of power and critical fault diagnosis</li>
                 <li>Safe isolation, fault location and permanent repair</li>
@@ -106,8 +123,8 @@
         </div>
 
         <div class="service-block">
-            <h2><i class="fa-solid fa-solar-panel"></i> EV and Solar</h2>
-            <ul>
+            <h2 class="newsreader-500"><i class="fa-solid fa-solar-panel"></i> EV and Solar</h2>
+            <ul class="service-list">
                 <li>EV home charging point installations</li>
                 <li>Electrical upgrades to safely support EV charging</li>
                 <li>Solar PV electrical works</li>
@@ -118,7 +135,7 @@
         </div>
 
         <div class="services-note">
-            All work is carried out safely, professionally, and in line with Irish
+            <strong>Note:</strong> All work is carried out safely, professionally, and in line with Irish
             electrical standards with certification provided where required.
         </div>
 
@@ -136,6 +153,12 @@
     </div>
 </section>
 
+<div id="fullscreen-spinner" class="fixed loading-spinner-container spinner show">
+    <div class="spinner-border show-spinner" role="status">
+        <span hidden>Loading...</span>
+    </div>
+</div>
+
 <footer class="footer">
     <div class="container footer-inner">
         <span>Serving Dublin &amp; Surrounding Areas</span>
@@ -143,6 +166,6 @@
     </div>
     <p class="copyright">© 2026 Allen &amp; Co Electrical</p>
 </footer>
-
+<script src="scripts.js"></script>
 </body>
 </html>
